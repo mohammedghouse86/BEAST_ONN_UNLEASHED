@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Daily_workout_timer from './components/daily_workout_timer'
+import Daily_workout_tracker from './components/daily_workout_tracker';
+import Test from './components/test';
+import { Provider } from 'react-redux';
+import store from './store/store'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Provider store={store}>
+    <div class="d-flex flex-row mb-3">
+      <div class="p-2"><Daily_workout_timer/></div>
+      <div class="p-2"><Daily_workout_tracker/></div>
+
     </div>
+    </Provider>
   );
 }
 
